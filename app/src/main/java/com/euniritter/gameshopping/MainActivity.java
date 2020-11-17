@@ -13,10 +13,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    Cadastro cadastro = new Cadastro();
 
     public void onClick1 (View view) {
-        Intent intent = new Intent( this, Login.class);
-        startActivity(intent);
+        if (cadastro.getLogin() == false){
+        Intent intent = new Intent( this, Console.class);
+        startActivity(intent);}
+        else {Intent intent = new Intent( this, Login.class);
+            startActivity(intent);
+        }
+
     }
 
 }

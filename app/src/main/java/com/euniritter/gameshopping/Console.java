@@ -12,17 +12,11 @@ public class Console extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_console);
+
     }
-    public void irPlay (View view) {
-        Intent intent = new Intent(this, Play.class);
-        startActivity(intent);
-    }
-    public void irXbox (View view) {
-        Intent intent = new Intent(this, Xbox.class);
-        startActivity(intent);
-    }
-    public void irNintendo (View view) {
-        Intent intent = new Intent(this, Nintendo.class);
-        startActivity(intent);
-    }
+
+    public void vaiParaNintendo (View view) { startActivity(new Intent(this, Nintendo.class));}
+    public void vaiParaPlay (View view) { startActivity(new Intent(this, Play.class));}
+    public void vaiParaXbox (View view) { startActivity(new Intent(this, Xbox.class));}
+
 }
